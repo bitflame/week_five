@@ -5,6 +5,10 @@ import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+
 public class RedBlackBST<Key extends Comparable<Key>, Value> {
     private Node root;
     private static final boolean RED = true;
@@ -90,7 +94,6 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         else StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.circle(node.xCoordinate, node.yCoordinate, nodeRadius);
         StdDraw.text(node.xCoordinate, node.yCoordinate, String.valueOf(node.key));
-
         drawNodes(node.right);
     }
 
@@ -258,6 +261,7 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
             char c = (char) StdRandom.uniform(65, 91);
             RBChars.put(c, index++);
         }
+        StdDraw.text(.4,.01,"First Random Batch");
         RBChars.draw();
         StdDraw.save("random1.png");
         StdDraw.pause(50);
@@ -268,7 +272,32 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
             char c = (char) StdRandom.uniform(65, 91);
             RBChars.put(c, index++);
         }
+        StdDraw.text(.4,.01,"Second Random Batch");
         RBChars.draw();
         StdDraw.save("random2.png");
+        /* print one of the problems you worked out already */
+        StdDraw.pause(50);
+        StdDraw.clear();
+        Character [] solvedArray = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O',
+                'P'};
+        RBChars = new RedBlackBST<>();
+        index=0;
+        for (char c: solvedArray) {
+            RBChars.put(c,index++);
+        }
+        StdDraw.text(.4,.01,"Ascending Array of Characters");
+        RBChars.draw();
+        StdDraw.save("ascending.png");
+        StdDraw.pause(50);
+        StdDraw.clear();
+        Collections.reverse(Arrays.asList(solvedArray));
+        RBChars = new RedBlackBST<>();
+        index=0;
+        for (char c: solvedArray) {
+            RBChars.put(c,index++);
+        }
+        StdDraw.text(.4,.01,"Descending Array of Characters");
+        RBChars.draw();
+        StdDraw.save("descending.png");
     }
 }
