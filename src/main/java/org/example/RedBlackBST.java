@@ -261,10 +261,10 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
             char c = (char) StdRandom.uniform(65, 91);
             RBChars.put(c, index++);
         }
-        StdDraw.text(.4,.01,"First Random Batch");
+        StdDraw.text(.4,.08,"Red Black Tree of the First Random Batch");
         RBChars.draw();
-        StdDraw.save("random1.png");
-        StdDraw.pause(50);
+        //StdDraw.save("random1.png");
+        StdDraw.pause(10000);
         StdDraw.clear();
         RBChars = new RedBlackBST<>();
         index = 0;
@@ -272,11 +272,11 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
             char c = (char) StdRandom.uniform(65, 91);
             RBChars.put(c, index++);
         }
-        StdDraw.text(.4,.01,"Second Random Batch");
+        StdDraw.text(.4,.08,"Red Black Tree of the Second Random Batch");
         RBChars.draw();
-        StdDraw.save("random2.png");
+        //StdDraw.save("random2.png");
         /* print one of the problems you worked out already */
-        StdDraw.pause(50);
+        StdDraw.pause(10000);
         StdDraw.clear();
         Character [] solvedArray = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O',
                 'P'};
@@ -285,10 +285,10 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         for (char c: solvedArray) {
             RBChars.put(c,index++);
         }
-        StdDraw.text(.4,.01,"Ascending Array of Characters");
+        StdDraw.text(.4,.08,"Red Black Tree of the Ascending Array of Characters");
         RBChars.draw();
-        StdDraw.save("ascending.png");
-        StdDraw.pause(50);
+        //StdDraw.save("ascending.png");
+        StdDraw.pause(10000);
         StdDraw.clear();
         Collections.reverse(Arrays.asList(solvedArray));
         RBChars = new RedBlackBST<>();
@@ -296,8 +296,8 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         for (char c: solvedArray) {
             RBChars.put(c,index++);
         }
-        StdDraw.text(.4,.01,"Descending Array of Characters");
+        StdDraw.text(.4,.08,"Red Black Tree of the Descending Array of Characters");
         RBChars.draw();
-        StdDraw.save("descending.png");
+        //StdDraw.save("descending.png");
     }
 }
