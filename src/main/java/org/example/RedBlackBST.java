@@ -115,12 +115,12 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         return x.color == RED;
     }
 
-    public Queue<Node> keys() {
+    public Queue<Key> keys() {
         return keys(root);
     }
 
     /* Test this method to make sure it does not use up more queue space than it actually needs */
-    private Queue<Node> keys(Node h) {
+    private Queue<Key> keys(Node h) {
 
         if (h != null) q.enqueue(h.key);
         if (h.left != null) {
